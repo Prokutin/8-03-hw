@@ -18,7 +18,7 @@ static-analysis:
   entrypoint: [""]
  variables:
  script:
-  - sonar-scanner -Dsonar.projectKey=netology-gitlab -Dsonar.sources=. -Dsonar.host.url=http://gitlab.localdomain:9000 -Dsonar.login=sqp_466ae030f0974e06ecfb586f74a85756cdb4e746
+  - sonar-scanner -Dsonar.projectKey=my_project -Dsonar.sources=. -Dsonar.host.url=http://gitlab.localdomain:9000 -Dsonar.login=sqp_466ae030f0974e06ecfb586f74a85756cdb4e746
  tags:
   - runner
 
