@@ -24,8 +24,19 @@ static-analysis:
 
 build:
   stage: build
+  only:
+    - main
   image: docker:latest
   script:
    - docker build .
   tags:
    - runner
+
+build_manual:
+  stage: build
+  image: docker:latest
+  when: manual
+  except:
+    - master
+  script:
+   - docker build .
