@@ -9,16 +9,16 @@ test:
   script: 
    - go test .
   tags:
-    - runner
+   - runner
 
 static-analysis:
- stage: static_test
+ stage: test
  image:
   name: sonarsource/sonar-scanner-cli
   entrypoint: [""]
  variables:
  script:
-  - sonar-scanner -Dsonar.projectKey=my_project -Dsonar.sources=. -Dsonar.host.url=http://gitlab.localdomain:9000 -Dsonar.login=sqp_466ae030f0974e06ecfb586f74a85756cdb4e746
+  - sonar-scanner -Dsonar.projectKey=netology-gitlab -Dsonar.sources=. -Dsonar.host.url=http://gitlab.localdomain:9000 -Dsonar.login=a778675a32f0d9d6455a3d502f4e2838e784994d
  tags:
   - runner
 
@@ -28,4 +28,4 @@ build:
   script:
    - docker build .
   tags:
-    - runner
+   - runner
